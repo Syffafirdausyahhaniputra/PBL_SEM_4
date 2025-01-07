@@ -1287,8 +1287,6 @@ $(document).ready(function () {
     }
 });
 
-
-
 $(document).ready(function () {
     window.togglePasswordUP = function (fieldId) {
         const passwordField = document.getElementById(fieldId);
@@ -1318,4 +1316,21 @@ $(document).ready(function () {
             }
         });
     });
+});
+
+function showOverlayRegis(message, isError = true) {
+    var content = '<div class="overlay-content ' + (isError ? 'error-message' : 'success-message') + '">' +
+        '<h2><i class="fas ' + (isError ? 'fa-exclamation-circle' : 'fa-check-circle') + '"></i> ' + (isError ? 'Terjadi Kesalahan/Error' : 'Berhasil') + '</h2>' +
+        '<p>' + message + '</p>' +
+        '<span class="close-overlay"><i class="fas fa-times"></i></span>' +
+        '</div>';
+
+    $('#overlay').fadeIn();
+    $('#overlay').html(content);
+    $('#overlay').find('.overlay-content').fadeIn();
+}
+
+// Fungsi untuk menutup overlay saat tombol close di klik
+$(document).on('click', '.close-overlay', function () {
+    $('#overlay').fadeOut();
 });

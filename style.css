@@ -6,40 +6,35 @@ body {
 }
 
 header {
-    text-align: center;
     margin-bottom: 30px;
 }
 
+/* Container 1 */
 .container1 {
     width: auto;
-    height: 30px;
-    margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
     background-color: #133ac4;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
-    /* Menjadikan container1 sebagai flex container */
     align-items: center;
     justify-content: space-between;
-    /* Mengatur posisi vertikal ke tengah */
     color: white;
 }
 
 .container1 .logo {
     height: 50px;
     width: 50px;
-    /* Atur ukuran logo sesuai kebutuhan */
-    margin-right: -250px;
-    /* Berikan sedikit margin antara logo dan teks */
+    margin-right: 10px;
     margin-left: 10px;
 }
 
-.h1 {
+.container1 .h1 {
     font-size: 24px;
     font-weight: bold;
     font-family: sans-serif;
+    margin-left: 10px;
     text-align: left;
-    /* Menjadikan teks berada di sisi kiri */
+    flex-grow: 1;
 }
 
 .container2 {
@@ -69,6 +64,7 @@ header {
 .flex-container {
     display: flex;
     justify-content: space-between;
+    position: relative; /* Tambahkan ini untuk mengatur posisi absolut tombol back di dalam flex-container */
 }
 
 .containerKiri {
@@ -197,13 +193,13 @@ button {
 }
 
 .btn-back_login {
-    margin-left: 4%;
     position: absolute;
-    left: 10px;
+    top: 10px; /* Jarak dari atas */
+    left: 10px; /* Jarak dari kiri */
     background-color: #EFF9FF;
     color: #133ac4;
-    font-size: 16px;
-    padding: 10px 20px;
+    font-size: 14px;
+    padding: 5px 10px;
     border: 3px solid #133ac4;
     border-radius: 5px;
     cursor: pointer;
@@ -265,21 +261,19 @@ button {
 /* =================================================== USER PAGE ==================================================== */
 
 .sub-title  {
-    font-size: 20px; /* Sesuaikan ukuran font */
+    font-size: 18px; /* Sesuaikan ukuran font */
     margin: 0; /* Hapus margin atas dan bawah */
     text-align: left;
     margin-top: -25px;
-    margin-left: -185%;
 }
 
-.title-container {
+.container1 .title-container {
     font-weight: bold;
     font-family: sans-serif;
+    margin-top: -20px;
+    margin-left: 10px;
     text-align: left;
-}
-
-.jaraktemplateheader {
-    margin-left: -370%;
+    flex-grow: 1;
 }
 
 .container2UP {
@@ -532,8 +526,8 @@ button {
 .backgroundRegister {
     font-family: Arial, sans-serif;
     background-image: url('gambar/polinemaUP.png');
-    background-size: cover; /* Mengatur ukuran gambar agar menutupi seluruh area */
-    background-position: center; /* Mengatur posisi gambar di tengah */
+    background-size: cover;
+    background-position: center;
 }
 
 /* CSS untuk infdex.html*/
@@ -546,6 +540,7 @@ button {
     text-align: center;
     background-color: #15e9e9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Tambahkan ini untuk positioning relatif */
 }
 
 .h2R {
@@ -553,6 +548,11 @@ button {
     font-family: sans-serif;
     text-align: center;
     color: #000000;
+}
+
+.UB {
+    margin-top: 60px;
+    margin-bottom: 40px;
 }
 
 .logoR {
@@ -565,35 +565,34 @@ button {
     margin-bottom: 10px; /* Menambahkan sedikit jarak antara setiap form-group */
 }
 
-/* Mengatur lebar kotak input dan label */
 .form-group input,
 .form-group select {
-    width: 100%; /* Mengatur lebar menjadi 100% dari parentnya */
-    box-sizing: border-box; /* Untuk mempertahankan lebar total */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .form-group label {
-    display: block; /* Mengatur agar label berada di atas input */
-    text-align: left; /* Mengatur agar teks label rata kiri */
-    margin-bottom: 5px; /* Menambahkan sedikit jarak antara label dan input */
-    color: #ffffff; /* Mengubah warna teks label */
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #ffffff;
 }
 
 #register input,
 #register select {
-    height: 25px; /* Mengatur tinggi input */
-    border-radius: 5px; /* Memberikan sudut pada input */
-    border: 1px solid #ccc; /* Mengatur garis pinggiran input */
-    padding: 5px; /* Memberikan ruang dalam di sekeliling teks input */
-    width: 100%; /* Mengatur lebar menjadi 100% dari parentnya */
-    box-sizing: border-box; /* Untuk mempertahankan lebar total */
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 #register label {
-    display: block; /* Mengatur agar label berada di atas input */
-    text-align: left; /* Mengatur agar teks label rata kiri */
-    margin-bottom: 5px; /* Menambahkan sedikit jarak antara label dan input */
-    color: #ffffff; /* Mengubah warna teks label */
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #ffffff;
 }
 
 .registrasi button {
@@ -618,9 +617,9 @@ button {
 }
 
 .btn-back_regis {
-    margin-top: -0.5%;
-    margin-left: -12%;
     position: absolute;
+    top: 15px; /* Jarak dari atas */
+    left: 15px; /* Jarak dari kiri */
     background-color: #EFF9FF;
     color: #133ac4;
     font-size: 14px;
@@ -644,15 +643,14 @@ button {
     width: 50%;
     height: auto;
     padding: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
     align-items: center;
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between; /* tambahkan ini */
+    position: relative; /* Add this line to position the buttons */
 }
 
 .containerMainPP {
@@ -702,15 +700,13 @@ button {
     border-radius: 5px;
 }
 
-.logoPP {
-    margin-top: 10px;
-    width: 100px;
-    height: 100px;
+.simpan {
+    position: absolute; /* Add this line to position the button */
+    bottom: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
 }
 
 .simpan button {
-    margin-left: 525px;
-    margin-top: 20px;
     height: 50px;
     width: 150px;
     background-color: white;
@@ -736,7 +732,9 @@ button {
 }
 
 .ubahPassword button {
-    margin-right: 525px;
+    position: absolute; /* Add this line to position the button */
+    top: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
     height: auto;
     width: auto;
     background-color: white;
@@ -757,7 +755,7 @@ button {
 }
 
 .simpanPassword button {
-    margin-left: 250px;
+    margin-left: 200px;
     margin-top: 20px;
     height: 50px;
     width: 150px;
@@ -815,6 +813,41 @@ button {
     cursor: pointer;
     width: 20px;
     height: 20px;
+}
+
+.edit-iconPP {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+}
+
+.edit-iconAdmin {
+    position: absolute;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    margin-top: -1%;
+    margin-left: -2%;
+}
+
+.containerGP {
+    position: relative;
+    height: 30%;
+    width: 37%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoPP {
+    margin-left: 20%;
+    width: 60%;
+    height: auto;
+    border-radius: 50%;
 }
 
 /* Tambahkan di style.css atau di dalam tag <style> di file HTML */
@@ -943,20 +976,37 @@ button {
     text-align: center; /* Pusatkan teks */
 }
 
+.error-messageRegis {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFEFEF;
+    border-radius: 8px;
+    border: 4px solid #AD1919;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000; /* Menempatkan di atas overlay */
+    display: none; /* Sembunyikan secara default */
+    max-width: 80%; /* Lebar maksimum */
+    text-align: center; /* Pusatkan teks */
+}
+
 /*========================================= Survey Mahasiswa ==========================================*/
 .containerKanan_SP {
-    max-height: 76vh; /* Atur tinggi maksimum agar container tidak lebih tinggi dari viewport */
-    overflow-y: scroll; /* Izinkan scroll saat konten melebihi tinggi container */
+    margin-top: -30px;
     width: 80%;
     height: auto;
     padding: 50px;
-    margin-top: -30px;
     background-color: #FFFFFF;
     background-size: cover;
     background-position: center;
-    align-items: center;
     display: flex;
     flex-wrap: wrap;
+    position: relative; /* Tambahkan properti position relative */
+    max-height: 76vh; /* Atur tinggi maksimum agar container tidak lebih tinggi dari viewport */
+    overflow-y: scroll; /* Izinkan scroll saat konten melebihi tinggi container */
 }
 
 .containerKanan_SP2 {
@@ -975,7 +1025,9 @@ button {
 }
 
 .blok_SP1 {
-    margin: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 50px;
 }
 
 .blok_SP {
@@ -984,6 +1036,7 @@ button {
     padding: 10px;
     display: flex;
     flex-direction: column;/* Pusatkan konten secara vertikal */
+    position: relative;
     cursor: pointer;
 }
 
@@ -993,6 +1046,7 @@ button {
     padding: 10px;
     display: flex;
     flex-direction: column;/* Pusatkan konten secara vertikal */
+    position: relative;
     cursor: pointer;
 }
 
@@ -1002,6 +1056,7 @@ button {
     padding: 10px;
     display: flex;
     flex-direction: column;/* Pusatkan konten secara vertikal */
+    position: relative;
     cursor: pointer;
 }
 
@@ -1011,6 +1066,7 @@ button {
     padding: 10px;
     display: flex;
     flex-direction: column;/* Pusatkan konten secara vertikal */
+    position: relative;
     cursor: pointer;
 }
 
@@ -1020,6 +1076,7 @@ button {
     padding: 10px;
     display: flex;
     flex-direction: column;/* Pusatkan konten secara vertikal */
+    position: relative;
     cursor: pointer;
 }
 
@@ -1029,6 +1086,7 @@ button {
     padding: 10px;
     display: flex;
     flex-direction: column;/* Pusatkan konten secara vertikal */
+    position: relative;
     cursor: pointer;
 }
 
@@ -1038,6 +1096,7 @@ button {
     padding: 10px;
     display: flex;
     flex-direction: column;/* Pusatkan konten secara vertikal */
+    position: relative;
     cursor: pointer;
 }
 
@@ -1047,6 +1106,7 @@ button {
     padding: 10px;
     display: flex;
     flex-direction: column;/* Pusatkan konten secara vertikal */
+    position: relative;
     cursor: pointer;
 }
 
@@ -1056,6 +1116,7 @@ button {
     padding: 10px;
     display: flex;
     flex-direction: column;/* Pusatkan konten secara vertikal */
+    position: relative;
     cursor: pointer;
 }
 
@@ -1065,6 +1126,7 @@ button {
     padding: 10px;
     display: flex;
     flex-direction: column;/* Pusatkan konten secara vertikal */
+    position: relative;
     cursor: pointer;
 }
 
@@ -1074,6 +1136,7 @@ button {
     padding: 10px;
     display: flex;
     flex-direction: column;/* Pusatkan konten secara vertikal */
+    position: relative;
     cursor: pointer;
 }
 
@@ -1083,6 +1146,7 @@ button {
     padding: 10px;
     display: flex;
     flex-direction: column;/* Pusatkan konten secara vertikal */
+    position: relative;
     cursor: pointer;
 }
 
@@ -1092,6 +1156,7 @@ button {
     padding: 10px;
     display: flex;
     flex-direction: column;/* Pusatkan konten secara vertikal */
+    position: relative;
     cursor: pointer;
 }
 
@@ -1101,6 +1166,7 @@ button {
     padding: 10px;
     display: flex;
     flex-direction: column;/* Pusatkan konten secara vertikal */
+    position: relative;
     cursor: pointer;
 }
 
@@ -1110,6 +1176,7 @@ button {
     padding: 10px;
     display: flex;
     flex-direction: column;/* Pusatkan konten secara vertikal */
+    position: relative;
     cursor: pointer;
 }
 
@@ -1119,6 +1186,7 @@ button {
     padding: 10px;
     display: flex;
     flex-direction: column;/* Pusatkan konten secara vertikal */
+    position: relative;
     cursor: pointer;
 }
 
@@ -1128,6 +1196,7 @@ button {
     padding: 10px;
     display: flex;
     flex-direction: column;/* Pusatkan konten secara vertikal */
+    position: relative;
     cursor: pointer;
 }
 
@@ -1137,6 +1206,7 @@ button {
     padding: 10px;
     display: flex;
     flex-direction: column;/* Pusatkan konten secara vertikal */
+    position: relative;
     cursor: pointer;
 }
 
@@ -1146,6 +1216,7 @@ button {
     padding: 10px;
     display: flex;
     flex-direction: column;/* Pusatkan konten secara vertikal */
+    position: relative;
     cursor: pointer;
 }
 
@@ -1155,6 +1226,7 @@ button {
     padding: 10px;
     display: flex;
     flex-direction: column;/* Pusatkan konten secara vertikal */
+    position: relative;
     cursor: pointer;
 }
 
@@ -1164,6 +1236,7 @@ button {
     padding: 10px;
     display: flex;
     flex-direction: column;/* Pusatkan konten secara vertikal */
+    position: relative;
     cursor: pointer;
 }
 
@@ -1173,6 +1246,7 @@ button {
     padding: 10px;
     display: flex;
     flex-direction: column;/* Pusatkan konten secara vertikal */
+    position: relative;
     cursor: pointer;
 }
 
@@ -1182,6 +1256,7 @@ button {
     padding: 10px;
     display: flex;
     flex-direction: column;/* Pusatkan konten secara vertikal */
+    position: relative;
     cursor: pointer;
 }
 
@@ -1325,7 +1400,7 @@ button {
 .survey-nama {
     width: 90%;
     margin: 0 auto;
-    margin-top: 4.5%;
+    margin-top: 5.5%;
     margin-bottom: 15px;
     padding: 20px; /* Menambahkan padding */
     border: 1px solid #ccc; /* Menambahkan border */
@@ -1554,7 +1629,7 @@ button {
 
 .blok_AU {
     background-color: #EFF9FF;
-    width: 350px;
+    width: 250px;
     height: auto;
     padding: 10px;
     display: flex;
@@ -1562,7 +1637,6 @@ button {
 }
 
 .content_AU {
-    margin-top: 10px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -1570,11 +1644,11 @@ button {
 
 .text_AU {
     margin-left: 15px; /* Beri jarak antara ikon dan teks */
-    font-size: 17px;
+    font-size: 15px;
 }
 
 .blok-strip_AU {
-    width: 350px;
+    width: auto;
     height: 7px;
     background-color: #41248b;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

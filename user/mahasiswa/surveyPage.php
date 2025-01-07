@@ -47,6 +47,7 @@ $survey_dosen_completed = isSurveyCompleted($user_id, 'Survey Dosen', $conn);
     <?php include '../TemplateUser/headerUser.php'; ?>
     <div class="containerMain">
         <?php include '../TemplateUser/sidebarUser.php'; ?>
+        
             <div class="containerKanan_SP">
                 <div class="blok_SP1">
                     <div class="blok_SP_FM isiSurvey-buttonM <?php echo $survey_fasilitas_completed ? 'completed' : ''; ?>" id="surveyFasilitasButton">
@@ -88,6 +89,7 @@ $survey_dosen_completed = isSurveyCompleted($user_id, 'Survey Dosen', $conn);
                     <div class="blok-strip_SP"></div>
                 </div>
             </div>
+        
     </div>
 </body>
 </html>

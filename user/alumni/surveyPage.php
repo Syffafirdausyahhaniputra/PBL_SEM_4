@@ -45,7 +45,7 @@ $survey_pascaKelulusan_completed = isSurveyCompleted($user_id, 'Survey Pasca Kel
     <?php include '../TemplateUser/headerUser.php'; ?>
     <div class="containerMain">
         <?php include '../TemplateUser/sidebarUser.php'; ?>
-        <div class="containerKananPP">
+        
             <div class="containerKanan_SP">
                 <div class="blok_SP1">
                     <div class="blok_SP_PK isiSurvey-buttonA <?php echo $survey_pascaKelulusan_completed ? 'completed' : ''; ?>" id="survey_PK_AlumniButton">
@@ -62,7 +62,7 @@ $survey_pascaKelulusan_completed = isSurveyCompleted($user_id, 'Survey Pasca Kel
                 </div>
             </div>
 
-        </div>
+        
     </div>
 </body>
 

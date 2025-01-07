@@ -53,7 +53,7 @@ $survey_DPI_completed = isSurveyCompleted($user_id, 'Survey Dosen Pembimbing', $
     <?php include '../TemplateUser/headerUser.php'; ?>
     <div class="containerMain">
         <?php include '../TemplateUser/sidebarUser.php'; ?>
-        <div class="containerKananPP">
+        
             <div class="containerKanan_SP">
                 <div class="blok_SP1">
                     <div class="blok_SP_SDMI isiSurvey-buttonI <?php echo $survey_SDMI_completed ? 'completed' : ''; ?>" id="surveySDMI_button"> 
@@ -83,7 +83,7 @@ $survey_DPI_completed = isSurveyCompleted($user_id, 'Survey Dosen Pembimbing', $
                 </div>
             </div>
 
-        </div>
+        
     </div>
 </body>
 

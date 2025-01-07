@@ -118,7 +118,9 @@ if (isset($_SESSION['username'])) {
                 </select>
             </div>
 
+            <div class = "registrasi button">
             <button type="submit" id="simpanButton">Simpan</button>
+            </div>
         </form>
     </div>
     </div>

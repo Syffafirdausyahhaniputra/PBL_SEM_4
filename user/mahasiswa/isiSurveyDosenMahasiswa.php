@@ -25,9 +25,7 @@ $result_survey_id = $conn->query($query_survey_id);
 if ($result_survey_id->num_rows > 0) {
     $row_survey = $result_survey_id->fetch_assoc();
     $survey_id = $row_survey['survey_id'];
-} else {
-    die("Error: Survey tidak ditemukan");
-}
+} 
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -86,14 +84,17 @@ if ($result_survey_id->num_rows > 0) {
 
                             echo "</div>"; // penutup answer-options_survey
                             echo "</div>"; // penutup mb-3
+                            
                         }
+                        echo "<div class='jarakSS'>
+                                <button type='submit' class='btn-primary_survey' name='submit'>Submit</button>
+                            </div>";
                     } else {
+                        echo "<div class = 'jarakh2norequest'>";
                         echo "Belum ada pertanyaan yang ditambahkan.";
+                        echo "</div>";
                     }
                     ?>
-                    <div class="jarakSS">
-                        <button type="submit" class="btn-primary_survey" name="submit">Submit</button>
-                    </div>
                 </form>
             </div>
         </div>

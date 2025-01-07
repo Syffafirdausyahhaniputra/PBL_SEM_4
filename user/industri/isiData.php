@@ -72,7 +72,9 @@ if (isset($_SESSION['username'])) {
                 <input type="text" id="responden_kota" name="responden_kota" required>
             </div>
 
+            <div class = "registrasi button">
             <button type="submit" id="simpanButton">Simpan</button>
+            </div>
         </form>
     </div>
     </div>

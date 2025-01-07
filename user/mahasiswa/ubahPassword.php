@@ -60,18 +60,18 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey Kepuasan - Politeknik Negeri Malang</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../script.js"></script>
+    <script src="../../script.js"></script>
 </head>
 <body class="backgroundRegister">
     <!-- Konten Anda -->
     <?php include '../TemplateUser/headerUser.php'; ?>
 
     <div class="Register-container">
-        <button type="button" class="backUP" onclick="window.history.back();">Back</button>
-        <h2 class="h2R">Perbaharuan Password</h2>
+        <button type="button" class="btn-back_regis" onclick="window.history.back();">Back</button>
+        <h2 class="UB">Perbaharuan Password</h2>
         <form method="POST" action="ubahPassword.php">
             <div class="form-group">
                 <label for="password_lama">Masukkan Password Lama:</label>

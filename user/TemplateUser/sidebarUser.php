@@ -31,7 +31,7 @@ if (!isset($_SESSION['username']) || !isset($_SESSION['user_status'])) {
         include '../../Koneksi/koneksi.php';
 
         // Query untuk mengambil data nama dan user_status dari database sesuai dengan username yang login
-        $sql = "SELECT nama, user_status FROM m_user WHERE username = '$username'";
+        $sql = "SELECT nama, user_status, profile_image FROM m_user WHERE username = '$username'";
         $result = $conn->query($sql);
 
         // Periksa apakah query berhasil dieksekusi
@@ -41,12 +41,19 @@ if (!isset($_SESSION['username']) || !isset($_SESSION['user_status'])) {
             // Simpan nama dan user_status yang ditemukan
             $nama = $row['nama'];
             $user_status = $row['user_status'];
+            $profile_image = $row['profile_image'];
+            
+            // Default profile image if not set
+            $profile_image_src = "../../gambar/userLogo.png";
+            if ($profile_image) {
+                $profile_image_src = "../../uploadGambarProfil/" . $profile_image;
+            }
         }
         ?>
 
         <div class="containerUser">
             <div>
-                <img src="../../gambar/userLogo.png" alt="Foto Profil" class="avatar"> <!-- Gambar Profil -->
+                <img src="<?php echo $profile_image_src; ?>" alt="Foto Profil" class="avatar"> <!-- Gambar Profil -->
                 <h3 class="user-name"><?php echo $nama; ?></h3> <!-- Tampilkan nama -->
                 <p class="user-role"><?php echo $user_status; ?></p> <!-- Tampilkan user_status -->
                 <div class="line"></div> <!-- Garis -->
@@ -54,7 +61,7 @@ if (!isset($_SESSION['username']) || !isset($_SESSION['user_status'])) {
                     <button id="profilButton" class="big"><img src="../../gambar/profilLogo.png" alt="Icon" class="icon"> Profil</button>
                     <button id="surveyButton" class="big"><img src="../../gambar/surveyLogo.png" alt="Icon" class="icon"> Survey</button>
                     <button id="hasilButton" class="big"><img src="../../gambar/hasilLogo.png" alt="Icon" class="icon"> Hasil</button>
-                    <div class="jarakLogout">
+                    <div class="jarakLogoutTU">
                         <button class="logout" id="logoutButton">Logout</button>
                     </div>
                 </div>

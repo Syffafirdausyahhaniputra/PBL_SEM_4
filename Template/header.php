@@ -19,11 +19,9 @@
 <body>
     <header>
         <div class="container1">
-            <img src="../gambar/polinema.png" alt="Logo Politeknik Negeri Malang" class="logo">
-            <div class="title-container">
-                <h1>POLITEKNIK NEGERI MALANG</h1>
+                <img src="../gambar/polinema.png" alt="Logo Politeknik Negeri Malang" class="logo">
+                <h1 class="jaraktemplateheader">POLITEKNIK NEGERI MALANG</h1>
                 <h2 class="sub-title">Survey Kepuasan</h2>
-            </div>
         </div>
         <div class="container2UP"></div>
     </header>

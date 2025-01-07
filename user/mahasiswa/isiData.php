@@ -80,7 +80,9 @@ if (isset($_SESSION['username'])) {
                 <input type="text" id="tahun_masuk" name="tahun_masuk" required>
             </div>
 
+            <div class = "registrasi button">
             <button type="submit" id="simpanButton">Simpan</button>
+            </div>
         </form>
     </div>
     </div>

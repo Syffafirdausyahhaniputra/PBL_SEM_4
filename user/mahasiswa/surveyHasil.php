@@ -49,7 +49,7 @@ $conn->close();
     <?php include '../TemplateUser/headerUser.php'; ?>
     <div class="containerMain">
         <?php include '../TemplateUser/sidebarUser.php'; ?>
-        <div class="containerKananPP">
+        
             <div class="containerKanan_SP">
                 <div class="blok_SP1">
                     <div class="blok_SP_HFM hasilSurvey-buttonM <?php echo $survey_fasilitas_completed ? 'completed' : ''; ?>" id="hasilSurveyFasilitasButton">
@@ -91,7 +91,7 @@ $conn->close();
                     <div class="blok-strip_SP"></div>
                 </div>
             </div>
-        </div>
+        
     </div>
 </body>
 </html>
